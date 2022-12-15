@@ -23,7 +23,7 @@ const Forecast = ({ data }: Props): JSX.Element => {
   const today = data.list[0];
 
   return (
-    <div className="w-full  md:max-w-[600px] py-4 md:py-4 md:px-10 lg:px-24 h-full lg:h-auto bg-white bg-opacity-20 backdrop-blur-ls rounded drop-shadow-lg">
+    <div className="w-full  md:max-w-[600px] py-4 md:py-4 md:px-10 lg:px-24 h-full lg:h-auto bg-white bg-opacity-20 backdrop-blur-ls rounded drop-shadow-lg overflow-auto">
       <div className="mx-auto w-[400px] ">
         <section className="text-center">
           <h2 className="text-4xl font-black mt-6">
@@ -61,11 +61,11 @@ const Forecast = ({ data }: Props): JSX.Element => {
           ))}
         </section>
         <section className="flex flex-wrap  justify-between text-gray-700">
-          <div className="w-[130px] text-xs font-bold flex flex-col items-center bg-white/30 backdrop-blur-xl rounded drop-shadow-xl py-4 mb-5">
+          <div className="w-[180px] text-xs font-bold flex flex-col items-center bg-white/30 backdrop-blur-xl rounded drop-shadow-xl py-4 mb-5">
             <Sunrise />
             <span className="mt-3">{getSunTime(data.sunrise)}</span>
           </div>
-          <div className="w-[130px] text-xs font-bold flex flex-col items-center bg-white/30 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
+          <div className="w-[180px] text-xs font-bold flex flex-col items-center bg-white/30 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
             <Sunset />
             <span className="mt-3">{getSunTime(data.sunset)}</span>
           </div>

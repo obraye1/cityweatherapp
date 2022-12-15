@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     useForecast();
     console.log('options', options);
   return (
-    <main className="flex justify-center items-center bg-gradient-to-br from-sky-400 via-violet-600 to-fuchsia-400 h-[100vh] w-full overflow-hidden">
+    <main className="flex justify-center items-center bg-gradient-to-br from-sky-400 via-violet-600 to-fuchsia-400 h-[100vh] w-full overflow-auto">
       {forecast ? (
         <Forecast data={forecast} />
       ) : (
